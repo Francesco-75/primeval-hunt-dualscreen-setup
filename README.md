@@ -1,4 +1,4 @@
-# Primeval Hunt — Dual Monitor Setup for Sega Lindbergh on Linux THIS IS MEANT TO BE USED ON THE 2.1.4 version of the loader
+# Primeval Hunt — Dual Monitor Setup for Sega Lindbergh on Linux THIS IS MEANT TO BE USED ON THE 2.1.4 version of the loader and Ubuntu 22.04.5
 
 ![Tested on Ubuntu 22.04](https://img.shields.io/badge/Ubuntu-22.04-E95420?logo=ubuntu)
 ![lindbergh-loader](https://img.shields.io/badge/lindbergh--loader-v2.1.4-blue)
