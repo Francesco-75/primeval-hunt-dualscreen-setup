@@ -21,6 +21,8 @@ Primeval Hunt requires two 640x480 monitors side by side — one for the main ga
 
 > The game splits the 1280x480 framebuffer in two 640x480 halves. DVI-D-0 always receives the **left half** (touchscreen/map) and HDMI-0 always receives the **right half** (main gameplay). The physical position of the monitors in your cabinet is entirely up to you — in the original Sega cabinet they are stacked vertically.
 
+> **Primary/Secondary monitor role:** The **touchscreen monitor (NCR/DVI-D-0) must be configured as the primary monitor** in GNOME display settings, and the **gameplay monitor (LG/HDMI-0) as secondary**. NVIDIA always places the primary monitor first in the TwinView framebuffer at +0+0 — which is the left half that the game uses for the touchscreen/map interface.
+
 ---
 
 ## 🖥️ Hardware used in this setup
