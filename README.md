@@ -13,12 +13,13 @@ Primeval Hunt requires two 640x480 monitors side by side — one for the main ga
 
 ## 📸 Result
 
-| Main gameplay screen (left) | Touchscreen/map (right) |
+| Left half of framebuffer | Right half of framebuffer |
 |---|---|
 | DVI-D-0 output | HDMI-0 output |
 | NCR ATMI15/24SB 15" | LG TV 32" |
+| Touchscreen / map | Main gameplay |
 
-> The game renders gameplay on the **left monitor** and the touchscreen interface on the **right monitor**. This is hardcoded in the game — you cannot swap them in software without patching the loader.
+> The game splits the 1280x480 framebuffer in two 640x480 halves. DVI-D-0 always receives the **left half** (touchscreen/map) and HDMI-0 always receives the **right half** (main gameplay). The physical position of the monitors in your cabinet is entirely up to you — in the original Sega cabinet they are stacked vertically.
 
 ---
 
@@ -121,7 +122,7 @@ Replace in xorg.conf:
 - `DVI-D-0` and `HDMI-0` in MetaModes → your actual output names
 - `HorizSync` and `VertRefresh` in Monitor sections → values from parse-edid
 
-> **Important:** The output on the **LEFT** (+0+0) must be connected to the **gameplay monitor**. Primeval Hunt always renders gameplay on the left half of the 1280x480 framebuffer. With NVIDIA, DVI outputs are always enumerated before HDMI — keep this in mind when deciding which monitor goes where.
+> **Important:** The output at position +0+0 in the framebuffer (left half) always receives the touchscreen/map, and the output at +640+0 (right half) always receives the main gameplay. With NVIDIA, DVI outputs are always enumerated before HDMI and placed at +0+0. The physical position of the monitors in your cabinet is independent of this — place them however suits your setup.
 
 ### Step 4 — Handle missing 640x480
 
