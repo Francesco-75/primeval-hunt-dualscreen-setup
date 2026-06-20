@@ -19,7 +19,7 @@ Primeval Hunt requires two 640x480 monitors side by side — one for the main ga
 
 ---
 
-## 📸 Result
+## Result
 
 | Left half of framebuffer | Right half of framebuffer |
 |---|---|
@@ -33,7 +33,7 @@ Primeval Hunt requires two 640x480 monitors side by side — one for the main ga
 
 ---
 
-## 🖥️ Hardware used in this setup
+## Hardware used in this setup
 
 | Component | Details |
 |---|---|
@@ -46,7 +46,7 @@ Primeval Hunt requires two 640x480 monitors side by side — one for the main ga
 
 ---
 
-## ⚡ Quick Start (same hardware)
+## Quick Start (same hardware)
 
 If you have the **exact same hardware** (GT1030, same monitor connections):
 
@@ -86,7 +86,7 @@ cd /path/to/DVP-0048A.PRIMEVAL.HUNT/prog
 
 ---
 
-## 🔧 Different Hardware? Start Here
+## Different Hardware? Start Here
 
 If you have different monitors or a different GPU output configuration, **do not copy xorg.conf directly** — it will not work. The EDID data of your monitors determines critical parameters.
 
@@ -180,7 +180,7 @@ RESOLUTION: 1280x480                 ← dual screen active ✓
 
 ---
 
-## 🔬 Technical Background
+## Technical Background
 
 ### Why this is complex
 
@@ -208,7 +208,7 @@ For a complete technical writeup including all failed attempts and their reasons
 
 ---
 
-## ⚠️ Known Issues
+## Known Issues
 
 - **GNOME top bar and dock** are visible over the game on the left monitor. Fix: install [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/) GNOME extension and disable panel and dash:
   ```bash
@@ -218,26 +218,6 @@ For a complete technical writeup including all failed attempts and their reasons
 - **NVIDIA TwinView ignores MetaModes resolution** at startup and defaults to 720x480. The `launch_primeval_hunt.sh` script forces 640x480 via xrandr before launching the game.
 - **SDL_VIDEO_X11_XRANDR=0** must be set at every game launch (handled by `launch_primeval_hunt.sh`).
 - **True SDL fullscreen** is not achievable with this approach — the window is borderless and positioned via Xlib instead. The visual result is identical to fullscreen.
-
----
-
-## 📁 Repository Structure
-
-```
-primeval-hunt-lindbergh-dualscreen/
-├── README.md
-├── lindbergh.ini.example          ← example ini with correct settings
-├── patches/
-│   ├── resolution.c               ← patched for lindbergh-loader v2.1.4
-│   └── sdlCalls.c                 ← patched for lindbergh-loader v2.1.4
-├── config/
-│   └── xorg.conf                  ← NVIDIA TwinView (adapt for your hardware)
-├── scripts/
-│   ├── arcade_display_info.sh     ← EDID diagnostic tool
-│   └── launch_primeval_hunt.sh    ← sets monitors + launches game
-└── docs/
-    └── primeval_hunt_dual_monitor_setup.pdf
-```
 
 ---
 
