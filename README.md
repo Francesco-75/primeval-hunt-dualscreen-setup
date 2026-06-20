@@ -5,7 +5,9 @@
 ![NVIDIA](https://img.shields.io/badge/NVIDIA-proprietary-76B900?logo=nvidia)
 ![X11](https://img.shields.io/badge/session-X11-lightgrey)
 
-<img src="bench-setup.jpg" width="700">
+<p align="center">
+  <img src="bench-setup.jpg" alt="Bench Setup" width="700">
+</p>
 
 This repository contains patches, configuration files and scripts to run **Primeval Hunt** (DVP-0048A) on a dual monitor setup using [lindbergh-loader](https://github.com/lindbergh-loader/lindbergh-loader) on Ubuntu 22.04 with NVIDIA proprietary drivers.
 
